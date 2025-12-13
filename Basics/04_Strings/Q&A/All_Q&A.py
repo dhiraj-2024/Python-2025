@@ -131,20 +131,23 @@ Create acronyms from:
 """
 
 
-
 # *************************************************************************
 """
 10. Check string start/end
 startswith("Coding")
 endswith("coding")
 """
+check_str = "Coding is important or not"
+print(check_str.startswith("Coding"))
+print(check_str.endswith("Coding"))
 
 # *************************************************************************
 """
 11. Strip spaces
 Remove left and right spaces using .strip()
 """
-
+strip_str = "   hello dfadfa     sadfasd. "
+print(strip_str.strip())
 # *************************************************************************
 """
 12. Validate identifiers
@@ -152,7 +155,10 @@ Which is a valid Python identifier?
 "30DaysOfPython"
 "thirty_days_of_python" (Valid)
 """
-
+s4 = "30DaysOfPython"
+print(s4.isidentifier())
+s5 = "thirty_days_of_python"
+print(s5.isidentifier())
 
 
 # *************************************************************************
@@ -163,8 +169,7 @@ Use tab \t
 Print strings with formatted alignment
 """
 
-
-
+print("asdjfa sdjflaj ckjaklsdjf \n asdkfljadiad alsdkfjao \t hello its tab space default value is 8")
 
 # *************************************************************************
 """
@@ -174,7 +179,15 @@ Circle area:
 radius = 10
 area = 3.14 * radius ** 2
 "The area of a circle with radius 10 is 314 meters square."
+"""
+radius = 10
+area = 3.14 * radius ** 2
+circle_area = "The area of a circle with radius {r} is {a} meters square."
+print(circle_area.format(r=radius, a=area))
+
+
 # *************************************************************************
+"""
 
 ✔ 15. Mathematical expressions with formatting
 
@@ -188,3 +201,25 @@ Using string formatting to output:
 8 // 6 = 1
 8 ** 6 = 262144
 """
+a = 8
+b = 6
+
+print(f"{a} + {b} = {a + b}")
+print(f"{a} - {b} = {a - b}")
+print(f"{a} * {b} = {a * b}")
+print(f"{a} / {b} = {a / b:.2f}")  # format to 2 decimal places
+print(f"{a} % {b} = {a % b}")
+print(f"{a} // {b} = {a // b}")
+print(f"{a} ** {b} = {a ** b}")
+
+
+a = 8
+b = 6
+
+print("{} + {} = {}".format(a, b, a + b))
+print("{} - {} = {}".format(a, b, a - b))
+print("{} * {} = {}".format(a, b, a * b))
+print("{} / {} = {:.2f}".format(a, b, a / b))   # 2 decimal places
+print("{} % {} = {}".format(a, b, a % b))
+print("{} // {} = {}".format(a, b, a // b))
+print("{} ** {} = {}".format(a, b, a ** b))

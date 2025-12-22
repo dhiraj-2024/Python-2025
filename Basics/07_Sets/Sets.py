@@ -9,6 +9,11 @@ print(st)            # Output: set()
 
 # Set with items
 fruits = {'banana', 'orange', 'mango', 'lemon'}
+vegitables = {"methi","onian","carrot","radish"}
+
+fruits.update(vegitables)
+print("this is new set :", fruits)
+
 print(fruits)        # Output: {'banana', 'orange', 'mango', 'lemon'}
 
 # ---------------------------------------------

@@ -1,6 +1,8 @@
 # create list
 myFirstList = ["oneplus", "apple", "samsung", "redmi"]
 print(myFirstList)
+for x in myFirstList:
+    print("item :", x)
 
 # create list using list() constructor
 mySecondList = list(("apple", "banana", "cherry"))
